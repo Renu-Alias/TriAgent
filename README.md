@@ -27,9 +27,9 @@ The frontend submits a question to `POST /ask` and displays the answer, score, f
 Example `.env`:
 
 ```env
-LLM_PROVIDER=groq
+LLM_PROVIDER=provider_name
 GROQ_API_KEY=your_key_here
-MODEL_NAME=llama-3.3-70b-versatile
+MODEL_NAME=model_name
 MAX_ATTEMPTS=5
 ```
 

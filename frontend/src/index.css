@@ -1,0 +1,115 @@
+:root {
+  --page-bg: #f7efe6;
+  --page-bg-deep: #ead9c8;
+  --panel-bg: rgba(255, 252, 248, 0.74);
+  --panel-border: rgba(123, 85, 63, 0.14);
+  --panel-shadow: 0 24px 70px rgba(103, 67, 45, 0.12);
+  --badge-bg: rgba(120, 82, 58, 0.1);
+  --field-border: rgba(123, 85, 63, 0.18);
+  --text-strong: #2b190f;
+  --text-soft: #73594b;
+  --accent-strong: #b64a20;
+  --serif: 'Georgia', 'Times New Roman', serif;
+  --display: 'Didot', 'Bodoni MT', 'Baskerville Old Face', 'Palatino Linotype', serif;
+  --brand: 'Cormorant Garamond', 'Baskerville Old Face', 'Palatino Linotype', serif;
+  --sans: 'Segoe UI', 'Trebuchet MS', Verdana, sans-serif;
+
+  color: var(--text-strong);
+  background:
+    radial-gradient(circle at top left, rgba(255, 241, 223, 0.95), transparent 36%),
+    radial-gradient(circle at top right, rgba(217, 164, 65, 0.18), transparent 24%),
+    linear-gradient(180deg, var(--page-bg) 0%, var(--page-bg-deep) 100%);
+  font-family: var(--sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: transparent;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: auto;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(10px);
+}
+
+body::before {
+  width: 320px;
+  height: 320px;
+  top: -120px;
+  right: -80px;
+  border-radius: 50%;
+  background: rgba(211, 97, 53, 0.13);
+}
+
+body::after {
+  width: 240px;
+  height: 240px;
+  bottom: 18%;
+  left: -60px;
+  border-radius: 28px;
+  transform: rotate(24deg);
+  background: rgba(217, 164, 65, 0.12);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text-strong);
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  max-width: 10ch;
+  margin: 14px 0 18px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 1.16rem;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
